@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated volley -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="volley.presentation.VolleyModelWizardID"
+            name="%_UI_VolleyModelWizard_label"
+            class="volley.presentation.VolleyModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/VolleyModelFile.gif">
+         <description>%_UI_VolleyModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated volley -->
+      <editor
+            id="volley.presentation.VolleyEditorID"
+            name="%_UI_VolleyEditor_label"
+            icon="icons/full/obj16/VolleyModelFile.gif"
+            extensions="volley"
+            class="volley.presentation.VolleyEditor"
+            contributorClass="volley.presentation.VolleyActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

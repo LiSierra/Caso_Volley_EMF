@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.example.volleymodel/src" modelPluginID="org.eclipse.example.volleymodel"
+    modelName="Volley" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>volley.ecore</foreignModel>
+  <genPackages prefix="Volley" disposableProviderFactory="true" ecorePackage="volley.ecore#/">
+    <genClasses ecoreClass="volley.ecore#//Persona">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/apellido"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/fechaNacimiento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/sexo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/telefono"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/direccion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Persona/correoElectronico"/>
+    </genClasses>
+    <genClasses ecoreClass="volley.ecore#//Empleado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Empleado/cargo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Empleado/sueldo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Empleado/fechaInicio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Empleado/fechaFin"/>
+    </genClasses>
+    <genClasses ecoreClass="volley.ecore#//Membresia">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Membresia/esMiembro"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Membresia/fechaInicio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Membresia/fechaFin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Membresia/nroMiembro"/>
+    </genClasses>
+    <genClasses ecoreClass="volley.ecore#//Solicitud">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Solicitud/fechaSolicitud"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference volley.ecore#//Solicitud/membresia"/>
+    </genClasses>
+    <genClasses ecoreClass="volley.ecore#//Factura">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Factura/nroFactura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Factura/fechaPagoOportuno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Factura/valor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Factura/detalle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference volley.ecore#//Factura/membresias"/>
+    </genClasses>
+    <genClasses ecoreClass="volley.ecore#//Tarifa">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Tarifa/costoAnualMembresia"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference volley.ecore#//Tarifa/membresia"/>
+    </genClasses>
+    <genClasses ecoreClass="volley.ecore#//Pago">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Pago/nroTransferencia"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Pago/nombreEntidadFinanciera"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute volley.ecore#//Pago/fechaPago"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
